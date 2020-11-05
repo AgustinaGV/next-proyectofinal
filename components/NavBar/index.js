@@ -1,5 +1,5 @@
 import {Container as NavBarContainer} from './styled';
-import Link from 'next/Link'
+import Link from 'next/link'
 
 const NavBar = ({}) => {
     
