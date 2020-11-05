@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import {Container as HeaderContainer} from './styled'
-import Link from 'next/Link'
+import Link from 'next/link'
 import { useAuth } from 'lib/useUser';
 
 import { NavBar } from 'components'
