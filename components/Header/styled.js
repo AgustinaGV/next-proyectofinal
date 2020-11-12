@@ -14,17 +14,17 @@ text-align:center;
 
 div:first-of-type {
 
-    width: 20%;
+    width: 25%;
 }
 
 div:nth-child(2n) {
 
-width: 60%;
+width: 50%;
 }
 
 div:nth-child(3n){
 
-    width:20%;
+    width:25%;
 }
 
 div {
@@ -51,6 +51,8 @@ img{
 }
 
 .titulo {
+
+    font-weight:800;
 
     
 }

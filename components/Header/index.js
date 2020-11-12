@@ -34,7 +34,7 @@ const Header = ({}) => {
             <Head></Head>
             <HeaderContainer>
                 <div className="titulo">
-                    <img src={RecipeeBook} alt="logo"/>
+                    <img src={RecipeeBook1} alt="logo"/>
                     Recetario vegano y vegetariano
                 </div>
                 <div>
