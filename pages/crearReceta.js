@@ -1,7 +1,7 @@
-import { FormRecetas } from 'components'
+import { CrearReceta as CrearRecetaContainer } from 'containers'
 
 export default function CrearReceta() {
   return (
-    <FormRecetas />
+    <CrearRecetaContainer />
   )
 }

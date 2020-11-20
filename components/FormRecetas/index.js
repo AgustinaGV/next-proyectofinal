@@ -7,6 +7,7 @@ const FormRecetas = ({userId}) => {
     const [message, setMessage] = useState('');
     return (
         <Container>
+            <h1>Crear receta</h1>
             <Formik
                 initialValues={{ titulo: '', descripcion:'', categoria:''}}
                 validate={value => {
@@ -52,14 +53,40 @@ const FormRecetas = ({userId}) => {
                             <ErrorMessage name="title" component="div" />
                         </div>
                         <div className="input_row">
-                            <Field type="text" name="categoria" placeholder="Categoría" />
+                            <Field as="select" name="categoria" placeholder="Categoría" >
+                                <option value="" disabled selected>Categoría</option>
+                                <option value="salado">Salado</option>
+                                <option value="dulce">Dulce</option>
+                            </Field>
                             <ErrorMessage name="company" component="div" />
                         </div>
                         <div className="input_row">
                             <Field as="textarea" type="content" name="descripcion" placeholder="Descripción" />
                             <ErrorMessage name="content" component="div" />
                         </div>
-                        <button type="submit" disabled={isSubmitting} className="orange">
+                        <div className="input_row">
+                            <Field as="textarea" type="content" name="ingredientes" placeholder="Ingredientes" />
+                            <ErrorMessage name="content" component="div" />
+                        </div>
+                        <div className="input_row">
+                            <Field type="text" name="tiempoPreparacion" placeholder="Tiempo de preparación" />
+                            <ErrorMessage name="title" component="div" />
+                        </div>
+                        <div className="input_row">
+                            <Field type="text" name="tiempoCoccion" placeholder="Tiempo de cocción" />
+                            <ErrorMessage name="title" component="div" />
+                        </div>
+                        <div className="input_row">
+                            <Field type="text" name="porciones" placeholder="¿Cuántas porciones rinde?" />
+                            <ErrorMessage name="title" component="div" />
+                        </div>
+                        <div className="input_row">
+                            <Field as="textarea" type="content" name="pasos" placeholder="Paso a paso" />
+                            <ErrorMessage name="content" component="div" />
+                        </div>
+                        
+
+                        <button type="submit" disabled={isSubmitting} className="botonForm">
                             Publicar
                         </button>
                     </Form>

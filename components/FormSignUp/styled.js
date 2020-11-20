@@ -16,7 +16,7 @@ width:100%;
 
 input,
 select, 
-textarea { width: 100%; min-height: 60px; line-height: 34px; border:1px solid #ddd; background: #fff; -webkit-appearance: none; -moz-appearance: none; appearance: none; padding-left: 12px; font-size: 17px; margin-bottom:10px; }
+textarea { width: 100%; min-height: 60px; line-height: 34px; border:1px solid #ddd; background: #fff; -webkit-appearance: none; -moz-appearance: none; appearance: none; padding-left: 12px; font-size: 17px; margin-bottom:10px; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto, Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue, sans-serif; resize:none}
 input[type='submit'] ,button { width: 100px; cursor: pointer; opacity: .8; background: #fff; border:0; text-transform: uppercase; padding:20px 10px !important; margin-top: 20px; color:#fff; background-color:#000; margin:0 auto; }
 select { background: url(images/arrow.png) no-repeat center right; }
 input[type='radio'],
