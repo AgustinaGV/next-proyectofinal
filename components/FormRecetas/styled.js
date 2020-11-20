@@ -28,13 +28,12 @@ label { font-size: 16px; }
 
 .botonForm {
 
-background-color:MediumAquaMarine;
+background-color:PaleGreen;
 font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto, Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue, sans-serif;
 text-transform: capitalize !important;
 font-weight:500;
 font-size: 1em;
 width:10em;
-border-radius:0;
 }
 
 .botonForm:hover{

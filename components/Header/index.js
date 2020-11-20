@@ -43,8 +43,8 @@ const Header = ({}) => {
                 <div>
                 {!auth.user &&
                 <>
-                    <Link href="/login"><a href=''>Iniciar sesión</a></Link>
-                    <Link href="/signup"><a href=''>Registrate</a></Link>
+                    <Link href={`/login`}><a >Iniciar sesión</a></Link>
+                    <Link href={`/signup`}><a >Registrate</a></Link>
                 </>
             }
                 </div>

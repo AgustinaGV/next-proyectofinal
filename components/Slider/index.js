@@ -16,7 +16,7 @@ const Slider = ({children}) => {
         <SliderContainer>
             <h1> Recetario vegetariano y vegano</h1>
             <div>
-                <AwesomeSlider>
+                <AwesomeSlider bullets={false}>
                     <div data-src={Receta} alt="Recetas cruelty free" />
                     <div data-src={Receta1} alt="Recetas cruelty free" />
                     <div data-src={Receta2} alt="Recetas cruelty free" />

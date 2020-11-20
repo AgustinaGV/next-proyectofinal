@@ -1,12 +1,9 @@
-import { Layout, Home as HomeContainer } from 'containers'
 import { FormSignUp } from 'components'
 
-export default function Home() {
+export default function SignUp() {
   return (
-      <HomeContainer>
 
         <FormSignUp />
 
-      </ HomeContainer>
   )
 }
