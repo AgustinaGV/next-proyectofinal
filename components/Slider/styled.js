@@ -21,6 +21,15 @@ h1 {
 
     color:white;
     background-color:black;
+    padding:0.7em 0 0.7em 0;
+    font-size:1.2em;
+    font-weight:700;
+}
+
+.divButton:hover {
+
+    cursor:pointer;
+    color:LightGreen; 
 }
 
 

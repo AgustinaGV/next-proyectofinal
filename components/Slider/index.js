@@ -1,4 +1,5 @@
 import {Container as SliderContainer} from './styled'
+import Link from 'next/link'
 
 import Receta from '../../images/receta.jpg'
 import Receta1 from '../../images/receta1.jpg'
@@ -23,7 +24,7 @@ const Slider = ({children}) => {
                     <div data-src={Receta3} alt="Recetas cruelty free" />
                     <div data-src={Receta4} alt="Recetas cruelty free" />
                 </AwesomeSlider>
-                <div className="divButton">Ver recetas</div>
+                <Link href={`/recetario`}><div className="divButton">Ver recetas</div></Link>
             </div>
         </SliderContainer>
     )

@@ -46,16 +46,25 @@ a:hover{
 
 img{
 
-    height:2em;
+    height:2.5em;
     margin: 0 1em 0 0;
 }
 
-.titulo {
+.logo {
 
     font-weight:800;
-
+    display:flex;
+    padding: 0 0 0 3em;
+    justify-content:center;
+    align-items:center;
     
 }
+
+.logo span {
+
+    font-size:1.2em;
+}
+
 
 `
 

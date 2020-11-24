@@ -12,9 +12,9 @@ const Home = ({children}) => {
         <HomeContainer>
             <Slider></Slider>
             <div className="cardsContainer">
-                <Card titulo="Cruelty Free" parrafo="Proin ac quam et lectus vestibulum blandit. Nunc maximus nibh at placerat tincidunt. Nam sem lacus, ornare non ante sed, ultricies fringilla massa. Ut congue, elit non tempus elementum, sem risus tincidunt diam, vitae sodales diam ipsum vitae purus." src={CrueltyFree} alt="Cruelty Free"/>
-                <Card titulo="Colaborativo" parrafo="Proin ac quam et lectus vestibulum blandit. Nunc maximus nibh at placerat tincidunt. Nam sem lacus, ornare non ante sed, ultricies fringilla massa. Ut congue, elit non tempus elementum, sem risus tincidunt diam, vitae sodales diam ipsum vitae purus." src={Support} alt="Colaborativo"/>
-                <Card titulo="En casa" parrafo="Proin ac quam et lectus vestibulum blandit. Nunc maximus nibh at placerat tincidunt. Nam sem lacus, ornare non ante sed, ultricies fringilla massa. Ut congue, elit non tempus elementum, sem risus tincidunt diam, vitae sodales diam ipsum vitae purus." src={Prepare} alt="En casa"/>
+                <Card titulo="Cruelty Free" parrafo="Buscando y proponiendo alternativas para que nuestras comidas estén libres de crueldad animal." src={CrueltyFree} alt="Cruelty Free"/>
+                <Card titulo="Colaborativo" parrafo="Compartir, colaborar, cooperar entre todes." src={Support} alt="Colaborativo"/>
+                <Card titulo="En casa" parrafo="Conocer el origen de nuestros alimentos. Poder comer algo rico, económico y responsable con el medioambiente hecho por vos" src={Prepare} alt="En casa"/>
             </div>
             {children}
         </HomeContainer>

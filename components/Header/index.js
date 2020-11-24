@@ -30,12 +30,12 @@ const Header = ({}) => {
     console.log('Mi user es ', auth.user)
 
     return (
-        <>
+        <div>
             <Head></Head>
             <HeaderContainer>
-                <div className="titulo">
+                <div className="logo">
                     <img src={RecipeeBook1} alt="logo"/>
-                    Recetario vegano y vegetariano
+                    <span>Recetario vegano y vegetariano</span>
                 </div>
                 <div>
                     <NavBar />
@@ -49,7 +49,7 @@ const Header = ({}) => {
             }
                 </div>
             </HeaderContainer>
-        </>
+        </div>
     )
 }
 
