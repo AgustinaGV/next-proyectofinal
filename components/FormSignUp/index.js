@@ -28,7 +28,7 @@ const FormSignUp = () => {
                             const res = await axios.post('api/auth/register', values)
                             const data = await res.data
                             setSubmitting(false);
-                            setMessage(`${data.message} - ${data.name}`)
+                            setMessage(`${data.message} - Bienvenide ${data.name}`)
                         } catch (error) {
                             if (error.response) {
                                 /*
@@ -61,7 +61,7 @@ const FormSignUp = () => {
                             <ErrorMessage name="name" component="div" />
                         </div>
                         <div className="input_row">
-                            <Field type="email" name="email" placeholder="Email" />
+                            <Field type="email" name="email" placeholder="Email" className="inputForm"/>
                             <ErrorMessage name="email" component="div" />
                         </div>
                         <div className="input_row">
@@ -74,7 +74,7 @@ const FormSignUp = () => {
                     </Form>
                 )}
             </Formik>
-            <p className="error_message">{message}</p>
+            <p className="message">{message}</p>
         </Container>
     )
 }

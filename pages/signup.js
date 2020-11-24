@@ -1,9 +1,7 @@
-import { FormSignUp } from 'components'
+import { Signup as SignupContainer } from 'containers'
 
 export default function SignUp() {
   return (
-
-        <FormSignUp />
-
+        <SignupContainer />
   )
 }

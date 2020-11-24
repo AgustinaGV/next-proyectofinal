@@ -1,7 +1,7 @@
-import { FormLogin } from 'components'
+import { Login as LoginContainer } from 'containers'
 
 export default function Login() {
   return (
-        <FormLogin />
+        <LoginContainer />
   )
 }

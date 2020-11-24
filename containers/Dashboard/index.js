@@ -1,4 +1,4 @@
-import Container from './styles'
+import {Container as DashboardContainer} from './styled'
 import { useProtected } from 'lib/useProtected'
 
 const Dashboard = () => {
@@ -7,10 +7,10 @@ const Dashboard = () => {
     if (!auth.user) return null;
 
     return (
-        <Container>
+        <DashboardContainer>
             <h1>Dashboard</h1>
-            <h2>{auth.user.email}</h2>
-        </Container>
+            <h2>¡Hola {auth.user.email}!</h2>
+        </DashboardContainer>
     )
 }
 

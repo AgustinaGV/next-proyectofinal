@@ -3,11 +3,20 @@ import { FormRecetas } from 'components'
 
 import Support from '../../images/support.svg'
 
+import { useAuth } from "lib/useUser";
+import { useProtected } from "lib/useProtected";
+
 const CrearReceta = ({children}) => {
+
+    const auth = useProtected();
+    
+    if (!auth.user) return null;
     
     return (
-        <FormRecetas>
-        </FormRecetas>
+        <RecetarioContainer>
+            <FormRecetas />
+        </RecetarioContainer>
+        
     )
 }
 

@@ -41,11 +41,18 @@ const Header = ({}) => {
                     <NavBar />
                 </div>
                 <div>
-                {!auth.user &&
+                {!auth.user ?
+                (
                 <>
                     <Link href={`/login`}><a >Iniciar sesión</a></Link>
                     <Link href={`/signup`}><a >Registrate</a></Link>
                 </>
+                ) : (
+                    <>
+                        <Link href={`/dashboard`}><a >Dashboard</a></Link>
+                        <a onClick={() => auth.logout()}>Cerrar sesión</a>
+                    </>
+                )
             }
                 </div>
             </HeaderContainer>

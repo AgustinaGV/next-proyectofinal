@@ -6,6 +6,11 @@ h1 {
     color:black;
 }
 
+h2 {
+
+    color:black;
+}
+
 
 `
 

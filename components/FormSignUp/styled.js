@@ -11,7 +11,12 @@ const Container = styled.div `
 margin-top:40px;
 width:100%;
 
-.error_message{padding:20px; color:#ff0000;font-size:14px;}
+.message{
+    padding:20px;
+    color:black;
+    font-size:1em;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto, Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue, sans-serif;
+}
 
 
 input,
