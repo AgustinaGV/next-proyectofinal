@@ -24,7 +24,7 @@ export default async (req, res) => {
                 .doc(response.user.uid)
                 .set(
                     {
-                        nombre: name,
+                        name: name,
                         //  apellido: lastname,
                         //   username,
                         //   dni,

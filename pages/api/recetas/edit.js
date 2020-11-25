@@ -12,7 +12,6 @@ export default async (req, res) => {
         tiempoCoccion,
         porciones,
         pasos,
-        email
     } = req.body;
 
     return await db
@@ -29,7 +28,6 @@ export default async (req, res) => {
         tiempoCoccion,
         porciones,
         pasos,
-        email
     })
     .then(() => {
         console.log("Firebase 4 - Post edited");

@@ -7,7 +7,7 @@ const Login = ({children}) => {
     
     return (
         <LoginContainer>
-            <h1>Iniciá sesión</h1>
+            <h1>Inicia sesión</h1>
             <FormLogin />
             {children}
         </LoginContainer>

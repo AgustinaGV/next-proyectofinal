@@ -9,8 +9,8 @@ const FormRecetas = ({userId}) => {
         <Container>
             <h1>Crear receta</h1>
             <Formik
-                initialValues={{ titulo: '', descripcion:'', categoria:''}}
-                validate={value => {
+                initialValues={{ titulo: '', descripcion:'', categoria:'', ingredientes:'', tiempoPreparacion:'', tiempoCoccion:'', porciones:'', pasos:''}}
+                validate={values => {
                     const errors = {};
                     if (!values.titulo) {
                         errors.titulo = 'Requerido';
@@ -30,18 +30,23 @@ const FormRecetas = ({userId}) => {
                             const res = await axios.receta('/api/recetas/create', {...values, user_id:userId});
                             const data = await res.data;
                             setSubmitting(false);
-                            setMessage(`Receta creada, grax ${data.titulo} (${res.status})`)
+                            setMessage(`Receta creada, grax ${data.titulo} (${res.status})`);
+                            console.log("hola try");
                         } catch (error) {
                             if (error.response) {
                                 console.log(error.response.data);
                                 console.log(error.response.status);
                                 console.log(error.response.headers);
+                                console.log("hola catch if 1");
                             } else if (error.request) {
                                 console.log(error.request);
+                                console.log("hola catch if 2");
                             } else {
                                 console.log('Error ', error.message);
+                                console.log("hola catch if 3");
                             }
                             console.log(error);
+                            console.log("hola");
                         }
                     }
                 }
@@ -49,12 +54,12 @@ const FormRecetas = ({userId}) => {
                 {({ isSubmitting}) => (
                     <Form>
                          <div className="input_row">
-                            <Field type="text" name="title" placeholder="Título" />
-                            <ErrorMessage name="title" component="div" />
+                            <Field type="text" name="titulo" placeholder="Título" />
+                            <ErrorMessage name="titulo" component="div" />
                         </div>
                         <div className="input_row">
                             <Field as="select" name="categoria" placeholder="Categoría" >
-                                <option value="" disabled selected>Categoría</option>
+                                <option defaultValue="default" disabled>Categoría</option>
                                 <option value="salado">Salado</option>
                                 <option value="dulce">Dulce</option>
                             </Field>
@@ -62,27 +67,27 @@ const FormRecetas = ({userId}) => {
                         </div>
                         <div className="input_row">
                             <Field as="textarea" type="content" name="descripcion" placeholder="Descripción" />
-                            <ErrorMessage name="content" component="div" />
+                            <ErrorMessage name="descripcion" component="div" />
                         </div>
                         <div className="input_row">
                             <Field as="textarea" type="content" name="ingredientes" placeholder="Ingredientes" />
-                            <ErrorMessage name="content" component="div" />
+                            <ErrorMessage name="ingredientes" component="div" />
                         </div>
                         <div className="input_row">
                             <Field type="text" name="tiempoPreparacion" placeholder="Tiempo de preparación" />
-                            <ErrorMessage name="title" component="div" />
+                            <ErrorMessage name="tiempoPreparacion" component="div" />
                         </div>
                         <div className="input_row">
                             <Field type="text" name="tiempoCoccion" placeholder="Tiempo de cocción" />
-                            <ErrorMessage name="title" component="div" />
+                            <ErrorMessage name="tiempoCoccion" component="div" />
                         </div>
                         <div className="input_row">
                             <Field type="text" name="porciones" placeholder="¿Cuántas porciones rinde?" />
-                            <ErrorMessage name="title" component="div" />
+                            <ErrorMessage name="porciones" component="div" />
                         </div>
                         <div className="input_row">
                             <Field as="textarea" type="content" name="pasos" placeholder="Paso a paso" />
-                            <ErrorMessage name="content" component="div" />
+                            <ErrorMessage name="pasos" component="div" />
                         </div>
                         
 
