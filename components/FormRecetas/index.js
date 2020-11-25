@@ -25,9 +25,9 @@ const FormRecetas = ({userId}) => {
                 }}
                 onSubmit={
 
-                    async (values, { setSubmitting}) => {
+                    async (values, { setSubmitting }) => {
                         try {
-                            const res = await axios.receta('/api/recetas/create', {...values, user_id:userId});
+                            const res = await axios.post('/api/recetas/create', {...values, user_id:userId});
                             const data = await res.data;
                             setSubmitting(false);
                             setMessage(`Receta creada, grax ${data.titulo} (${res.status})`);
