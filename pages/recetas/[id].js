@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import Link from 'next/link';
 import axios from 'axios';
 
-import { CardReceta } from 'components';
+import { PaginaReceta } from 'containers';
 
 // Importo base de datos de firebase;
 import { db } from "lib/firebase";
@@ -12,21 +12,13 @@ import { db } from "lib/firebase";
 
 export default function SingleRecipe(props) {
 
-    console.log('PROPS', props);
-    return (<div>
-        <div>Receta: {props.titulo}</div>
-        <div>Descripción: {props.descripcion}</div>
-        <div>Categoria: {props.categoria}</div>
-        <div>Ingredientes: {props.ingredientes}</div>
-        <div>Tiempo de preparación: {props.tiempoPreparacion}</div>
-        <div>Tiempo de cocción: {props.tiempoCoccion}</div>
-        <div>Rinde: {props.porciones} porciones</div>
-        <div>Paso a paso: {props.pasos}</div>
-    </div>);
+    console.log(props);
+    return <PaginaReceta props={props}/>;
 };
 
 
 export const getServerSideProps = async ({ query }) => {
+    
     let recetaObj = {};
 
     await db
