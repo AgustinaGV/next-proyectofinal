@@ -33,10 +33,12 @@ const Header = ({}) => {
         <div>
             <Head></Head>
             <HeaderContainer>
-                <div className="logo">
+                <Link href={`http://localhost:3000/`} className="pointer">
+                    <div className="logo">
                     <img src={RecipeeBook1} alt="logo"/>
                     <span>Recetario vegano y vegetariano</span>
-                </div>
+                    </div>
+                </Link>    
                 <div>
                     <NavBar />
                 </div>

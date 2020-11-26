@@ -65,6 +65,9 @@ img{
     font-size:1.2em;
 }
 
+.pointer {
+    cursor:pointer;
+}
 
 `
 

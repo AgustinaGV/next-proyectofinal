@@ -1,10 +1,10 @@
 import {Container as RecetarioContainer} from './styled';
-import { Card } from 'components';
+import { CardReceta } from 'components';
 import { useState, useEffect } from 'react';
 import { db } from 'lib/firebase';
-import Link from 'next/link';
 import axios from 'axios';
 
+import Prepare from '../../images/prepare.svg'
 
 const Recetario = () => {
 
@@ -23,11 +23,17 @@ const Recetario = () => {
     return (
         <RecetarioContainer>
             <h1>Recetario</h1>
-            <div>
+            <div className="containerRecetas">
                 {recetas.length ?
                 recetas.map((receta) => {
                     return (
-                        <Card titulo={receta.titulo} src="" alt={receta.titulo}/>
+                        <CardReceta 
+                        titulo={receta.titulo} 
+                        src={Prepare} 
+                        alt={receta.titulo}
+                        parrafo={receta.descripcion}
+                        href={`/recetas/${receta.id}`}
+                        />
                     );
                 }) : <h1>Cargando...</h1>}
             </div>

@@ -1,10 +1,19 @@
+import React from 'react';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router'
+import Link from 'next/link';
+import axios from 'axios';
+
+import { CardReceta } from 'components';
+
 // Importo base de datos de firebase;
 import { db } from "lib/firebase";
 
-const SingleRecipe = (props) => {
 
-    return (
-        <>
+export default function SingleRecipe(props) {
+
+    console.log('PROPS', props);
+    return (<div>
         <div>Receta: {props.titulo}</div>
         <div>Descripción: {props.descripcion}</div>
         <div>Categoria: {props.categoria}</div>
@@ -13,51 +22,48 @@ const SingleRecipe = (props) => {
         <div>Tiempo de cocción: {props.tiempoCoccion}</div>
         <div>Rinde: {props.porciones} porciones</div>
         <div>Paso a paso: {props.pasos}</div>
-        <div>Autor: {props.email}</div>
-        </>
-    )
-}
+    </div>);
+};
+
 
 export const getServerSideProps = async ({ query }) => {
-    let blogObj = {};
-    let userObj = {}
+    let recetaObj = {};
+
     await db
-        .collection('posts')
+        .collection('recetas')
         .doc(query.id)
         .get()
         .then(async result => {
-            blogObj = { 
+            recetaObj = { 
+                id: query.id,
                 titulo: result.data().titulo, 
                 descripcion: result.data().descripcion,
                 categoria: result.data().categoria, 
                 ingredientes: result.data().ingredientes, 
                 tiempoPreparacion: result.data().tiempoPreparacion, 
                 tiempoCoccion: result.data().tiempoCoccion,
-                categoria: result.data().porciones, 
-                ingredientes: result.data().pasos,
-                user_id: result.data().email }
+                porciones: result.data().porciones, 
+                pasos: result.data().pasos, }
 
-            await db
-                .collection('users')
-                .doc(blogObj.user_id)
-                .get()
-                .then(result => {
-                    userObj = { email: result.data().email, nombre: result.data().nombre }
-                });
+            //await db
+              //  .collection('users')
+                //.doc(recetaObj.user_id)
+                //.get()
+                //.then(result => {
+                  //  userObj = { email: result.data().email, nombre: result.data().nombre }
+                //});
         });
     return {
-        props: {
-            titulo: blogObj.titulo,
-            descripcion: blogObj.descripcion,
-            categoria: blogObj.categoria,
-            ingredientes: userObj.ingredientes,
-            tiempoPreparacion: blogObj.tiempoPreparacion,
-            tiempoCoccion: blogObj.tiempoCoccion,
-            categoria: blogObj.categoria,
-            ingredientes: userObj.ingredientes,
-            userMail: userObj.email,
-        }
-    }
-}
 
-export default SingleRecipe
+        props: {
+            titulo: recetaObj.titulo,
+            descripcion: recetaObj.descripcion,
+            categoria: recetaObj.categoria,
+            ingredientes: recetaObj.ingredientes,
+            tiempoPreparacion: recetaObj.tiempoPreparacion,
+            tiempoCoccion: recetaObj.tiempoCoccion,
+            porciones: recetaObj.porciones,
+            pasos: recetaObj.pasos,
+        },
+    };
+};
