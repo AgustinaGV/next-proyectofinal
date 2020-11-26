@@ -12,6 +12,7 @@ const Dashboard = () => {
         <DashboardContainer>
             <h1>Dashboard</h1>
             <h2>¡Hola {auth.user.email}!</h2>
+            <h2>Acá iría el nombre pero no funciona {auth.user.name} ¡!</h2>
         </DashboardContainer>
     )
 }
