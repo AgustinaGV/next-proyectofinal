@@ -33,7 +33,7 @@ const Header = ({}) => {
         <div>
             <Head></Head>
             <HeaderContainer>
-                <Link href={`http://localhost:3000/`} className="pointer">
+                <Link href={`https://next-proyectofinal.vercel.app/`} className="pointer">
                     <div className="logo">
                     <img src={RecipeeBook1} alt="logo"/>
                     <span>Recetario vegano y vegetariano</span>
