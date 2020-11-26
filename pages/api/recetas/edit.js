@@ -3,7 +3,7 @@ import { db } from 'lib/firebase';
 
 export default async (req, res) => {
     const {
-        user_id,
+        id,
         titulo,
         descripcion,
         categoria,
@@ -19,7 +19,7 @@ export default async (req, res) => {
     .doc (id)
     .set (
     {
-        user_id,
+        id,
         titulo,
         descripcion,
         categoria,

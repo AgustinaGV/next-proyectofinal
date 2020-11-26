@@ -31,22 +31,17 @@ const FormRecetas = ({userId}) => {
                             const data = await res.data;
                             setSubmitting(false);
                             setMessage(`Receta creada, grax ${data.titulo} (${res.status})`);
-                            console.log("hola try");
                         } catch (error) {
                             if (error.response) {
                                 console.log(error.response.data);
                                 console.log(error.response.status);
                                 console.log(error.response.headers);
-                                console.log("hola catch if 1");
                             } else if (error.request) {
                                 console.log(error.request);
-                                console.log("hola catch if 2");
                             } else {
                                 console.log('Error ', error.message);
-                                console.log("hola catch if 3");
                             }
                             console.log(error);
-                            console.log("hola");
                         }
                     }
                 }
