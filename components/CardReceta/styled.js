@@ -10,6 +10,7 @@ text-align:center;
 font-size: 1em;
 margin:0 auto;
 display:inline-block;
+margin-bottom: 4em;
 
 
 h4 {
