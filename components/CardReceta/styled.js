@@ -44,6 +44,7 @@ border-radius:0;
 color:white;
 padding: 0.7em 0.5em 0.7em 0.5em;
 margin: 0 auto;
+cursor: pointer;
 }
 
 .botonForm:hover{
